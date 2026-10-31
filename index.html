@@ -1,4 +1,3 @@
-
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
@@ -175,7 +174,7 @@ const SEED=[
 {id:'p6',title:'Gilded Aviator Shades',cat:'Eyewear',price:27500,stock:3,rating:4.5,tag:'Exclusive',best:0,dim:'145 mm frame width',desc:'Lightweight frames with smoked lenses and gold temples.',img:''}];
 const STAT=['Pending Verification','Processing','Out for Delivery','Completed'];
 let S={products:store.get('products',SEED),users:store.get('users',[]),orders:store.get('orders',[]),carts:store.get('carts',{}),uid:store.get('uid',null),set:store.get('set',{name:'Siddique Admin',num:'03XX-XXXXXXX'})};
-let M=null,AT='dash',F='all',OF='All',PF='Pending';S.set.platform=S.set.platform||'Easypaisa';S.admins=store.get('admins',[]);const PLAT=['Easypaisa','JazzCash','NayaPay','SadaPay'];
+let M=null,AT='dash',F='all',OF='All',PF='Pending';S.set.platform=S.set.platform||'Easypaisa';S.admins=store.get('admins',[]);const PLAT=['Easypaisa','JazzCash','NayaPay','SadaPay','OPay'];
 const save=k=>store.set(k,S[k]),me=()=>S.users.find(u=>u.id===S.uid),ck=()=>S.uid||'guest',cart=()=>S.carts[ck()]||(S.carts[ck()]={}),prod=id=>S.products.find(p=>p.id===id);
 const cartCount=()=>Object.values(cart()).reduce((a,b)=>a+b,0);
 const isPaid=o=>o.pay==='ep'?o.verified:o.status==='Completed';
